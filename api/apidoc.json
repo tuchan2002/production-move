@@ -1,0 +1,986 @@
+[
+  {
+    "name": "POST register",
+    "Des": "Tạo tài khoản, chỉ admin mới tạo được",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6MSwiaWF0IjoxNjcyMzkzOTA3LCJleHAiOjE2NzI0ODAzMDd9.PL2KKvvjoNknI_vBw3Z-69oTzqOS3FjgfkCEtC147a8",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "name", "value": "admin1", "type": "text" },
+          { "key": "email", "value": "admin1@bigcorp.com", "type": "text" },
+          { "key": "password", "value": "123456", "type": "text" },
+          {
+            "key": "address",
+            "value": "Yen Hoa - Cau Giay - Ha Noi",
+            "type": "text"
+          },
+          { "key": "role", "value": "1", "type": "text" },
+          { "key": "phone_number", "value": "0887723456", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/auth/register"
+    }
+  },
+  {
+    "name": "POST login",
+    "Des": "Đăng nhập tài khoản",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6MiwiaWF0IjoxNjcyMTU5OTcxLCJleHAiOjE2NzIyNDYzNzF9.TwJfmFaL9x6Lc58vFjlAbCHmd3CAx-KPRR39yp2f-OI",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "email", "value": "admin1@bigcorp.com", "type": "text" },
+          { "key": "password", "value": "123456", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/auth/login"
+    }
+  },
+  {
+    "name": "PL GET a product line",
+    "Des": "Lấy thông tin dòng sản phẩm theo mã dòng sản phẩm",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6MywiaWF0IjoxNjcyMzkxNTY3LCJleHAiOjE2NzI0Nzc5Njd9.o5yiTJYzRVuUX7rr8Qsi8LEJgBDdA72ALYR8jDYv8_s",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/productlines/1"
+    }
+  },
+  {
+    "name": "PL GET all product line",
+    "Des": "Lấy tất cả các dòng sản phẩm",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6MSwiaWF0IjoxNjcyMzk1MDk3LCJleHAiOjE2NzI0ODE0OTd9.IZRYqj0GDOFXjV66QcZ_qlcOhyCTiwSU6ttnf_E3eMs",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/productlines"
+    }
+  },
+  {
+    "name": "PL GET product line own",
+    "Des": "Lấy tẩt cả dòng sản phẩm có theo mã đơn vị ",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6MywiaWF0IjoxNjcyMzM0OTk3LCJleHAiOjE2NzI0MjEzOTd9.yE6UEFZ7mF8PZAnwbtemjJUfeMu6Z8FlyVKj5go8FB8",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/productlines/own"
+    }
+  },
+  {
+    "name": "PL POST a product line",
+    "Des": "Tạo dòng sản phẩm mới, chỉ admin mới tạo được",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6MSwiaWF0IjoxNjcyMzk1MDk3LCJleHAiOjE2NzI0ODE0OTd9.IZRYqj0GDOFXjV66QcZ_qlcOhyCTiwSU6ttnf_E3eMs",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "model", "value": "phone14-ProMax", "type": "text" },
+          { "key": "ram", "value": "6", "type": "text" },
+          { "key": "memory", "value": "1024", "type": "text" },
+          { "key": "color", "value": "vang", "type": "text" },
+          {
+            "key": "description",
+            "value": "dong dien thoai cao cap nhat moi nhat cua apple",
+            "type": "text"
+          },
+          { "key": "price", "value": "1499", "type": "text" },
+          {
+            "key": "imageUrl",
+            "value": "https://res.cloudinary.com/dkdwgdq4i/image/upload/v1672396306/res/images/w5clmx9eqyo1gjn1eong.jpg",
+            "type": "text"
+          }
+        ]
+      },
+      "url": "localhost:8080/api/v1/productlines"
+    }
+  },
+  {
+    "name": "PL EDIT a product line",
+    "Des": "Chỉnh sửa thông tin dòng sản phẩm, chỉ admin mới sửa được",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6MSwiaWF0IjoxNjcyMjUxNTIzLCJleHAiOjE2NzIzMzc5MjN9.pKXugK6zAHJWDptTdWFCOKce3k5iu1AFQt-xCSVTYNE",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "PUT",
+      "body": { "mode": "formdata", "formdata": [] },
+      "url": "localhost:8080/api/v1/productlines/6"
+    }
+  },
+  {
+    "name": "PL DELETE a product line",
+    "Des": "Xóa dòng sản phẩm theo mã, chỉ admin mới xóa được",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjY4ODc4NTcyLCJleHAiOjE2Njg5NjQ5NzJ9.d70x8JDYtBKoccw_G-p3mOBbFQRAOD3z-SQPqfwkakM",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "DELETE",
+      "body": null,
+      "url": "localhost:8080/api/v1/productlines/1"
+    }
+  },
+  {
+    "name": "WH POST a warehouse",
+    "Des": "Tạo kho hàng",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6MiwiaWF0IjoxNjcyMzk0NjM1LCJleHAiOjE2NzI0ODEwMzV9.d6zCZ0TF3vVPFgvZU0wp498Xn8qBfrPwU2vcCkTsHlQ",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          {
+            "key": "address",
+            "value": "Mai Dich - Cau Giay - Ha Noi",
+            "type": "text"
+          },
+          { "key": "phone_number", "value": "0335565281", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/warehouses"
+    }
+  },
+  {
+    "name": "WH GET a warehouse with id",
+    "Des": "Lấy thông tin kho hàng theo mã kho hàng",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6NCwiaWF0IjoxNjcwNDg0OTMyLCJleHAiOjE2NzA1NzEzMzJ9.IPts5625kWUU9nYAA9hfGonXhzXeZr7qsxWaUBOH89Y",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/warehouses/1"
+    }
+  },
+  {
+    "name": "WH GET warehouses own",
+    "Des": "lấy thông tin kho hàng của đơn vị hiện đăng nhập",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6MiwiaWF0IjoxNjcxODk0ODE1LCJleHAiOjE2NzE5ODEyMTV9.sNp9CemEeh-iUxuwaZ6TFLjhOF6LXCR6ROtG9R2Bai0",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/warehouses/own"
+    }
+  },
+  {
+    "name": "PRO POST products",
+    "Des": "Tạo lô hàng gồm nhiều sản phẩm",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6MiwiaWF0IjoxNjcyMzk2NzE1LCJleHAiOjE2NzI0ODMxMTV9.NCT86Ag2irhSkyH2a5e71VW1FZt3z25mBS-zMkPuh9c",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "productLineId", "value": "4", "type": "text" },
+          { "key": "warehouseId", "value": "3", "type": "text" },
+          { "key": "quantity", "value": "20", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/products"
+    }
+  },
+  {
+    "name": "PRO POST sell product",
+    "Des": "Bán 1 sản phẩm",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwicm9sZSI6MywiaWF0IjoxNjcyMzk2OTAxLCJleHAiOjE2NzI0ODMzMDF9.SrJzzozgJ_8AJCJp_-N-ZL_-JyHaQ90A7WmABlatix8",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "prodId", "value": "P-299026", "type": "text" },
+          {
+            "key": "customerName",
+            "value": "Nguyen Thi Minh Thuy",
+            "type": "text"
+          },
+          {
+            "key": "customerAddress",
+            "value": "PVD - Cau Giay - Ha Noi",
+            "type": "text"
+          },
+          { "key": "customerPhone", "value": "0349844507", "type": "text" },
+          {
+            "key": "customerEmail",
+            "value": "thuy@vnu.edu.vn",
+            "type": "text"
+          },
+          { "key": "oldCustomerId", "value": "5", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/products/sell"
+    }
+  },
+  {
+    "name": "PRO POST guarentee product",
+    "Des": "Bảo hành sản phẩm",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6MywiaWF0IjoxNjcyMzk2ODExLCJleHAiOjE2NzI0ODMyMTF9.QG3lyv1jqhUpdt3UNY8LsbyptxOdeKRX6NEzC_6XgmE",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "prodId", "value": "P-358316", "type": "text" },
+          { "key": "errorDescription", "value": "hong pin", "type": "text" },
+          { "key": "typeErrorCode", "value": "ERR-BA", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/products/guarentee"
+    }
+  },
+  {
+    "name": "PRO POST move product",
+    "Des": "Tạo đơn vận chuyển sản phẩm",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6MywiaWF0IjoxNjcxODk0NjA3LCJleHAiOjE2NzE5ODEwMDd9.Rm5411JpnMG2PHQt-ihoBgp55tzlBO1J_5BILXEPdLA",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "unitId", "value": "4", "type": "text" },
+          { "key": "warehouseId", "value": "3", "type": "text" },
+          { "key": "productId", "value": "P-166120", "type": "text" },
+          { "key": "statusCode", "value": "STT-05", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/products/move"
+    }
+  },
+  {
+    "name": "PRO POST accept receive product",
+    "Des": "Xác nhập nhận sản phẩm",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6NCwiaWF0IjoxNjcxODk4NjU3LCJleHAiOjE2NzE5ODUwNTd9.TK9QseqU4-kyx9MsBZcG3FfBKTvTF-Jt-FefsrjCBYs",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "transportId", "value": "1", "type": "text" },
+          { "key": "isAccept", "value": "true", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/products/accept"
+    }
+  },
+  {
+    "name": "PRO POST guarentee fixed",
+    "Des": "Xác nhận bảo hành xong sản phẩm",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6NCwiaWF0IjoxNjcyMjUxMTg2LCJleHAiOjE2NzIzMzc1ODZ9.YlnoxH62h9bDwOOfMc4nf85v_-cWdzu6V__SfQaKV7o",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "prodId", "value": "P-204444", "type": "text" },
+          { "key": "isFixed", "value": "true", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/products/guarentee/fixed"
+    }
+  },
+  {
+    "name": "PRO GET product by product line own",
+    "Des": "Lấy tất cả mã sản phẩm theo dòng sản phẩm của đơn vị đang đăng nhập",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwicm9sZSI6MywiaWF0IjoxNjcyMzk2OTAxLCJleHAiOjE2NzI0ODMzMDF9.SrJzzozgJ_8AJCJp_-N-ZL_-JyHaQ90A7WmABlatix8",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": { "mode": "raw", "raw": "" },
+      "url": "localhost:8080/api/v1/products/productline/4"
+    }
+  },
+  {
+    "name": "PRO GET sold product own",
+    "Des": "Lấy tất cả sản phẩm đã bán của đơn vị đang đăng nhập",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6MywiaWF0IjoxNjcyMzk2ODExLCJleHAiOjE2NzI0ODMyMTF9.QG3lyv1jqhUpdt3UNY8LsbyptxOdeKRX6NEzC_6XgmE",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": { "mode": "raw", "raw": "" },
+      "url": "localhost:8080/api/v1/products/sold/own"
+    }
+  },
+  {
+    "name": "PRO-Tran get send transport own",
+    "Des": "Lấy tất cả đơn vận chuyển mà đơn vị hiện hành là người gửi",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6MywiaWF0IjoxNjcxODk0NjA3LCJleHAiOjE2NzE5ODEwMDd9.Rm5411JpnMG2PHQt-ihoBgp55tzlBO1J_5BILXEPdLA",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/transports/product/own/send"
+    }
+  },
+  {
+    "name": "PRO-Tran get receive transport own",
+    "Des": "Lấy tất cả đơn vận chuyển mà đơn vị hiện hành là người nhận",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6NCwiaWF0IjoxNjcxODk4NjU3LCJleHAiOjE2NzE5ODUwNTd9.TK9QseqU4-kyx9MsBZcG3FfBKTvTF-Jt-FefsrjCBYs",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/transports/product/own/receive"
+    }
+  },
+  {
+    "name": "PK POST move package",
+    "Des": "Tạo đơn vận chuyển lô hàng",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6MiwiaWF0IjoxNjcyMzk2NzAwLCJleHAiOjE2NzI0ODMxMDB9.SVCrNzgbCqkZYVthHg-koXJmGm1l6QrG0ILgsHBm-aI",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "unitId", "value": "9", "type": "text" },
+          { "key": "packageId", "value": "PK-845496", "type": "text" },
+          { "key": "statusCode", "value": "STT-02", "type": "text" },
+          { "key": "warehouseId", "value": "9", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/packages/move"
+    }
+  },
+  {
+    "name": "PK POST recall package",
+    "Des": "Tạo ghi nhận triệu hồi lô hàng và sản phẩm của lô hàng đó",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6MiwiaWF0IjoxNjcyMDcxNDc1LCJleHAiOjE2NzIxNTc4NzV9.iLcDj4yRXE3EfITv8Exdq5_1_QhBQBkafYUm2uwRqCI",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "packageId", "value": "PK-352307", "type": "text" },
+          {
+            "key": "errorDescription",
+            "value": "hong loa roi",
+            "type": "text"
+          },
+          { "key": "typeErrorCode", "value": "ERR-ST", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/packages/recall"
+    }
+  },
+  {
+    "name": "PK GET package with unit created",
+    "Des": "Lấy tất cả lô hàng mà đơn vị hiện hành đã tạo",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6MiwiaWF0IjoxNjcyMzk2NzE1LCJleHAiOjE2NzI0ODMxMTV9.NCT86Ag2irhSkyH2a5e71VW1FZt3z25mBS-zMkPuh9c",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/packages/factory/created"
+    }
+  },
+  {
+    "name": "PK GET package with PL unit",
+    "Des": "Lấy tất cả package theo dòng sản phẩm của đơn vị hiện hành",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6MiwiaWF0IjoxNjcyMzk2NzE1LCJleHAiOjE2NzI0ODMxMTV9.NCT86Ag2irhSkyH2a5e71VW1FZt3z25mBS-zMkPuh9c",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": { "mode": "formdata", "formdata": [] },
+      "url": "localhost:8080/api/v1/packages/own"
+    }
+  },
+  {
+    "name": "PK-Tran POST accept recieve package",
+    "Des": "Xác nhập nhận đơn vận chuyển lô hàng",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwicm9sZSI6MywiaWF0IjoxNjcyMzk2OTAxLCJleHAiOjE2NzI0ODMzMDF9.SrJzzozgJ_8AJCJp_-N-ZL_-JyHaQ90A7WmABlatix8",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "transportId", "value": "10", "type": "text" },
+          { "key": "isAccept", "value": "true", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/packages/accept"
+    }
+  },
+  {
+    "name": "PK-Tran get send transport own",
+    "Des": "Lấy tất cả các đơn vận chuyển mà đơn vị hiện hành là người gửi",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6MiwiaWF0IjoxNjcxODk0ODE1LCJleHAiOjE2NzE5ODEyMTV9.sNp9CemEeh-iUxuwaZ6TFLjhOF6LXCR6ROtG9R2Bai0",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/transports/package/own/send"
+    }
+  },
+  {
+    "name": "PK-Tran get receive  transport own",
+    "Des": "Lấy tất cả đơn vận chuyển mà đơn vị hiện hành là người nhận",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6MywiaWF0IjoxNjcyMzk2ODExLCJleHAiOjE2NzI0ODMyMTF9.QG3lyv1jqhUpdt3UNY8LsbyptxOdeKRX6NEzC_6XgmE",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/transports/package/own/receive"
+    }
+  },
+  {
+    "name": "POST refresh_token",
+    "Des": "lấy lại token duy trì đăng nhập",
+    "request": {
+      "auth": null,
+      "method": "POST",
+      "body": { "mode": "raw", "raw": "" },
+      "url": "localhost:8080/api/v1/auth/refresh_token"
+    }
+  },
+  {
+    "name": "U get all users",
+    "Des": "Lấy tất cả thông tin của users",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6MSwiaWF0IjoxNjY5MDE2MTM5LCJleHAiOjE2NjkxMDI1Mzl9.68qXHq4p0iosBbwO19Z6rPAIZXmaNIvQggRCJCsPt3s",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/users"
+    }
+  },
+  {
+    "name": "U get all users by role",
+    "Des": "Lấy tất cả thông tin của users theo chức năng",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJpYXQiOjE2Njg5OTkxMjIsImV4cCI6MTY2OTA4NTUyMn0.0dgM6d6xJrO53x4GCmHwRqYCFcX6j-LPQm-qMSm2_9M",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": { "mode": "raw", "raw": "" },
+      "url": "localhost:8080/api/v1/users/role/3"
+    }
+  },
+  {
+    "name": "U change password with userId",
+    "Des": "Thay đổi password của user, chỉ admin mới đổi được",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJpYXQiOjE2Njg5OTkxMjIsImV4cCI6MTY2OTA4NTUyMn0.0dgM6d6xJrO53x4GCmHwRqYCFcX6j-LPQm-qMSm2_9M",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "PUT",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "email", "value": "dlbh02@bigcorp.com", "type": "text" },
+          { "key": "newPassword", "value": "1121212", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/users/2"
+    }
+  },
+  {
+    "name": "U delete user with id",
+    "Des": "Xóa user, chỉ admin mới xóa được",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJpYXQiOjE2Njg5OTkxMjIsImV4cCI6MTY2OTA4NTUyMn0.0dgM6d6xJrO53x4GCmHwRqYCFcX6j-LPQm-qMSm2_9M",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "DELETE",
+      "body": { "mode": "formdata", "formdata": [] },
+      "url": "localhost:8080/api/v1/users/4"
+    }
+  },
+  {
+    "name": "REQ-PK  POST create request",
+    "Des": "tạo một yêu cầu",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwicm9sZSI6MywiaWF0IjoxNjcyMzk2OTAxLCJleHAiOjE2NzI0ODMzMDF9.SrJzzozgJ_8AJCJp_-N-ZL_-JyHaQ90A7WmABlatix8",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "receiverId", "value": "3", "type": "text" },
+          {
+            "key": "content",
+            "value": "iphone 13 so luong 20 cai",
+            "type": "text"
+          }
+        ]
+      },
+      "url": "localhost:8080/api/v1/requests"
+    }
+  },
+  {
+    "name": "REQ-PK POST accept recieve package",
+    "Des": "Xác nhận yêu cầu đến",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6MiwiaWF0IjoxNjcyMzk2NzE1LCJleHAiOjE2NzI0ODMxMTV9.NCT86Ag2irhSkyH2a5e71VW1FZt3z25mBS-zMkPuh9c",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "requestId", "value": "8", "type": "text" },
+          { "key": "isAccept", "value": "true", "type": "text" }
+        ]
+      },
+      "url": "localhost:8080/api/v1/requests/accept"
+    }
+  },
+  {
+    "name": "REQ-PK GET get send request own",
+    "Des": "Lấy tất cả yêu cầu mà đơn vị hiện hành là người gửi",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwicm9sZSI6MywiaWF0IjoxNjcyMzk2OTAxLCJleHAiOjE2NzI0ODMzMDF9.SrJzzozgJ_8AJCJp_-N-ZL_-JyHaQ90A7WmABlatix8",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "receiverId", "value": "2", "type": "text" },
+          { "key": "productLineId", "value": "1", "type": "text" },
+          { "key": "quantity", "value": "20", "type": "text" },
+          {
+            "key": "description",
+            "value": "cho xin vai cai iphone de",
+            "type": "text"
+          }
+        ]
+      },
+      "url": "localhost:8080/api/v1/requests/send"
+    }
+  },
+  {
+    "name": "REQ-PK GET get receive request own",
+    "Des": "Lấy tất cả yêu cầu mà đơn vị hiện hành là người nhận",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6MiwiaWF0IjoxNjcyMzk2NzE1LCJleHAiOjE2NzI0ODMxMTV9.NCT86Ag2irhSkyH2a5e71VW1FZt3z25mBS-zMkPuh9c",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          { "key": "receiverId", "value": "2", "type": "text" },
+          { "key": "productLineId", "value": "1", "type": "text" },
+          { "key": "quantity", "value": "20", "type": "text" },
+          {
+            "key": "description",
+            "value": "cho xin vai cai iphone de",
+            "type": "text"
+          }
+        ]
+      },
+      "url": "localhost:8080/api/v1/requests/receive"
+    }
+  },
+  {
+    "name": "ADMIN get all unit info",
+    "Des": "Lấy tất cả thông tin của các user",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6MSwiaWF0IjoxNjcyMTM0NzYzLCJleHAiOjE2NzIyMjExNjN9.7Mz1AtqhHHBpFJkf8tBLvE4XKpwH1t-uttoU5kpwPOs",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/statistics/admin/unit"
+    }
+  },
+  {
+    "name": "ADMIN get statistics product",
+    "Des": "thống kê về sản phẩm theo dòng sản phẩm của admin",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6MSwiaWF0IjoxNjcyMjIxNDg5LCJleHAiOjE2NzIzMDc4ODl9.NYADdJnrC_YwOO8t1Ihh_2aDYmzCHOU0zDKm3qo6yDQ",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/statistics/admin/product"
+    }
+  },
+  {
+    "name": "AGENT get statistics product",
+    "Des": "thống kê về sản phẩm theo dòng sản phẩm của đại lý bán hàng",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6MywiaWF0IjoxNjcyMjIyNDA1LCJleHAiOjE2NzIzMDg4MDV9.OYnEK_tFLyVjQrK_TF_oour_G2VJV9JXQtpXoidXGTU",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/statistics/agent/product"
+    }
+  },
+  {
+    "name": "FACT get statistics product",
+    "Des": "thống kê về sản phẩm theo dòng sản phẩm của cơ sở sản xuất",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6MiwiaWF0IjoxNjcyMjIyNzg0LCJleHAiOjE2NzIzMDkxODR9.1H13W8AV2KGLbMbqimoFwfxYLkakqPl83c-9GGjcAmM",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/statistics/factory/product"
+    }
+  },
+  {
+    "name": "CENTER get statistics product",
+    "Des": "thống kê về sản phẩm theo dòng sản phẩm của trung tâm bảo hành",
+    "request": {
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6NCwiaWF0IjoxNjcyMjUwODUwLCJleHAiOjE2NzIzMzcyNTB9.JAqgY3hRwFcwJmKXNhs293MAdhN0gMee5yJi0wUXLA4",
+            "type": "string"
+          }
+        ]
+      },
+      "method": "GET",
+      "body": null,
+      "url": "localhost:8080/api/v1/statistics/center/product"
+    }
+  },
+  {
+    "name": "UPLOAD image",
+    "Des": "tải ảnh lên cloud",
+    "request": {
+      "auth": null,
+      "method": "POST",
+      "body": {
+        "mode": "formdata",
+        "formdata": [
+          {
+            "key": "image",
+            "type": "file",
+            "src": "/C:/Users/thinh/OneDrive/Máy tính/PM-image/iphone14-pro-max-vang.jpg"
+          }
+        ]
+      },
+      "url": "localhost:8080/api/v1/image/upload"
+    }
+  }
+]

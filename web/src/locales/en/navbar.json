@@ -1,0 +1,16 @@
+{
+  "product line": "Product Line",
+  "accounts": "Accounts",
+  "package": "Package",
+  "warehouse": "Warehouse",
+  "transport": "Transport",
+  "request": "Request",
+  "sold product": "Sold Product",
+  "guarantee": "Guarantee",
+  "change password": "Change Password",
+  "language": "Language",
+  "logout": "Logout",
+  "old password": "Old Password",
+  "new password": "New Password",
+  "confirm password": "Confirm Password"
+}

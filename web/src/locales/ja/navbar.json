@@ -1,0 +1,16 @@
+{
+  "product line": "商品ライン",
+  "accounts": "アカウント",
+  "package": "パッケージ",
+  "warehouse": "倉庫",
+  "transport": "運送管理",
+  "request": "要求管理",
+  "sold product": "販売した商品",
+  "guarantee": "保証",
+  "change password": "パスワード変更",
+  "language": "言語",
+  "logout": "ログアウト",
+  "old password": "現在のパスワード",
+  "new password": "新パスワード",
+  "confirm password": "新パスワード確認"
+}
